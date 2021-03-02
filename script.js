@@ -110,7 +110,7 @@ function checkRow(array, arrayValue) {
 
 /* -------------------------------------------------------------------------------- */
 
-function check() {
+function checkGrid() {
     // We take every input and check their validity, i.e. the value is between 1 and the size, and if it is not the case, then we are not executiing the code for the not valid input 
     inputList.forEach(e => {
         if (e.checkValidity() === false) {
