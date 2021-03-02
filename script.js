@@ -11,24 +11,28 @@ class Coord {
     }
 }
 
-function createCoordArray(array) {
+function createCoordArray() {
+    let array = [];
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
             array.push(new Coord(i,j));
         }
     }
+    return array;
 }
 
-function transposeCoord(array) {
+function transposeCoord() {
+    let array = [];
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
             array.push(new Coord(j,i));
         }
     }
+    return array;
 }
 
-function shuffleCoord(array) { 
-    createCoordArray(array)
+function shuffleCoord() { 
+    let array = createCoordArray();
 
     for (var i = array.length - 1; i > 0; i--) {  
         var randomIndex = Math.floor(Math.random() * (i + 1));         
@@ -39,7 +43,8 @@ function shuffleCoord(array) {
     return array; 
 } 
 
-function grid(array, bigArray) {
+function grid(array) {
+    let bigArray = [];
     let row = [];
     for (let i = 0; i < array.length ; i++) {
         row.push(array[i])
@@ -48,10 +53,13 @@ function grid(array, bigArray) {
             row = [];
         }
     }
+
+    return bigArray;
 }
 
 
-function gridValue(array, bigArray) {
+function gridValue(array) {
+    let bigArray = [];
     let row = [];
     for (let i = 0; i < array.length ; i++) {
         let inputValue = document.querySelector(`#cell_${array[i].x}-${array[i].y}`).value;
@@ -62,6 +70,7 @@ function gridValue(array, bigArray) {
             row = [];
         }
     }
+    return bigArray;
 }
 
 function checkRow(array, arrayValue) {
@@ -84,20 +93,14 @@ function checkRow(array, arrayValue) {
 
 /* -------------------------------------------------------------------------------- */
 
-    let rowArray = [];
-    let gridRowArray = [];
-    createCoordArray(rowArray);
-    grid(rowArray, gridRowArray);
+    let rowArray = createCoordArray();
+    let gridRowArray = grid(rowArray);
 
-    let columnArray = [];
-    let gridColumnArray = [];
-    transposeCoord(columnArray);
-    grid(columnArray, gridColumnArray);
+    let columnArray = transposeCoord();
+    let gridColumnArray = grid(columnArray);
 
-    let shapeArray = [];
-    let gridShapeArray = [];
-    shuffleCoord(shapeArray);
-    grid(shapeArray, gridShapeArray);
+    let shapeArray = shuffleCoord();
+    let gridShapeArray = grid(shapeArray);
 
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
@@ -105,11 +108,9 @@ function checkRow(array, arrayValue) {
         }
     }
 
-
-
 /* -------------------------------------------------------------------------------- */
 
-function check() {
+function checkGrid() {
     // We take every input and check their validity, i.e. the value is between 1 and the size, and if it is not the case, then we are not executiing the code for the not valid input 
     inputList.forEach(e => {
         if (e.checkValidity() === false) {
@@ -120,14 +121,9 @@ function check() {
     });
 
     
-    let rowArrayValue = [];
-    gridValue(rowArray, rowArrayValue)
-
-    let columnArrayValue = [];
-    gridValue(columnArray, columnArrayValue);
-
-    let shapeArrayValue = [];
-    gridValue(shapeArray, shapeArrayValue);
+    let rowArrayValue = gridValue(rowArray)
+    let columnArrayValue = gridValue(columnArray);
+    let shapeArrayValue = gridValue(shapeArray);
     
     checkRow(gridRowArray, rowArrayValue);
     checkRow(gridColumnArray, columnArrayValue);
