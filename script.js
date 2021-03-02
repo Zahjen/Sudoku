@@ -1,7 +1,7 @@
 const inputList = document.querySelectorAll('input')
 const checkMistake = document.querySelector('#checkMistake');
 const mistakeColor = 'rgba(208, 126, 255, 0.3)';
-const size = 9;
+const size = 4;
 let colorArray = ['rgb(224, 201, 224)', 'rgb(208, 208, 245)', 'rgb(204,255,255)', 'rgb(204, 255, 204)', 'rgb(255,255,204)', 'rgb(255,204,153)', 'rgb(230, 166, 166)', 'rgb(201, 184, 165)', 'rgb(216, 224, 209)'];
 
 class Coord {
