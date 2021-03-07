@@ -5,49 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ok.css">
 
-    <title>Magic Sudoku</title>
+    <title>Sudoku (in progress)</title>
 </head>
+
 <body>
 
 <table>
-
-<tbody>
-
-    <tr>
-        <td><input type="number" min="1" max="4" step="1" id="cell_0-0"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_0-1"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_0-2"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_0-3"></td>
-    </tr>
-    <tr>
-        <td><input type="number" min="1" max="4" step="1" id="cell_1-0"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_1-1"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_1-2"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_1-3"></td>
-    </tr>
-    <tr>
-        <td><input type="number" min="1" max="4" step="1" id="cell_2-0"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_2-1"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_2-2"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_2-3"></td>
-    </tr>
-    <tr>
-        <td><input type="number" min="1" max="4" step="1" id="cell_3-0"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_3-1"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_3-2"></td>
-        <td><input type="number" min="1" max="4" step="1" id="cell_3-3"></td>
-    </tr>
-
-</tbody>
-
+    <tbody>
+        
+    </tbody>
 </table>
 
-<button id="checkMistake">Check</button>
+<input type="number" min='4' max='9' class='size'>
+<button class='selectSize'>Generate the grid</button>
+<button class="checkMistake">Check Mistake !</button>
+<button class="newGrid">New Grid</button>
 
-
-<!--<script src="check.js"></script>-->
-<script src="script.js"></script>
+<script src="ok.js"></script>
 </body>
 </html>
