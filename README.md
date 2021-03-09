@@ -11,6 +11,7 @@ For the moment the following is possible :
 The hardest part is yet to come : 
 - Generate a totally solvable sudoku grid.
 - Then, randomly remove some values in the above solvable grid.
+- Make it responsive (for the moment this is just for large devices)
 - And may be more things that have not come to mind yet.
 
 Want to see how does it look for the moment ? [Take a look right here!](https://zahjen.github.io/Sudoku-in-progress/)
